@@ -1,0 +1,4 @@
+__pycache__/
+unity_simulations/Reacher*
+unity-environment.log
+.ipynb_checkpoints/
