@@ -1,4 +1,6 @@
 __pycache__/
-unity_simulations/Reacher*
+unity_simulations/Reacher.x86
+unity_simulations/Reacher.x86_64
+unity_simulations/Reacher_Data/
 unity-environment.log
 .ipynb_checkpoints/
