@@ -3,7 +3,7 @@
 ## Introduction
 The work is about training a double-jointed arm using deep reinforcement learning to move to target locations. For this project, you will work with the Unity ML-Agents Reacher environment. In this environment, a double-jointed arm can move to target locations. In this work, we will use a version of this environment that contains 20 identical agents, each with its own copy of the environment. This helps in distributing the task of gathering experience and thus speeds up the learning process.
 
-![reacher](https://github.com/MathiasThor/deepReach/deepReach.png)
+![reacher](https://github.com/MathiasThor/deepReach/blob/master/data/deepReach.png)
 
 A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible. The goal is to reach an average score of +30 over 100 consecutive episodes overall 20 agents.
 Learning algorithm
@@ -73,7 +73,7 @@ Due to this project's scope, only the `PPO_CLIP_RANGE` hyperparameter will be te
 ## Experiments and results
 The following plot shows the results of using three different `PPO_CLIP_RANGE` values (0.05, 0.10, and 0.15). For each `PPO_CLIP_RANGE` value, the learning algorithm was executed for 300 episodes and repeated five times. This makes it possible to calculate and plot the mean return and standard error.
 
-![plot](https://github.com/MathiasThor/deepReach//data/score_episode.png)
+![plot](https://github.com/MathiasThor/deepReach/blob/master/data/score_episode.png)
 *Plot of the mean score for all 20 robots per episode when using three different PPO clip range parameters*
 
 As can be seen, a PPO clipping range of 0.05 performs the best, with the highest converged score and the lowest standard error. Using this clipping range, it is possible to reliably achieve an average score of at least 30 (up to more than 38) for more than 100 episodes in approx. 200 episodes. A PPO clipping range of 0.10 met the score requirement three out of five times, and a range of 0.15 was never able to. Thus, it is beneficial for the task to keep the policy in the proximity of the old policy. In the `/saved_weights` directory a weight set using `PPO_CLIP_RANGE` = 0.05 is placed. This can be loaded and tested with the "Load and test trained agent" cell.
