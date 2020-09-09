@@ -4,7 +4,7 @@
 
 In this work, we train a double-jointed arm using deep reinforcement learning (PPO) to move to target locations. The double-jointed arm is implemented in the Unity ML-Agents Reacher environment. In this work, we will use a version of the environment that contains 20 identical agents, each with its own copy of the environment. This helps in distributing the task of gathering experience and thus speeds up the learning process.
 
-![reacher](https://github.com/MathiasThor/deepReach/data/deepReach.gif)
+![reacher](https://github.com/MathiasThor/deepReach/blob/master/data/deepReach.gif)
 
 A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible. The goal is to reach an average score of +30 over 100 consecutive episodes overall 20 agents.
 
@@ -47,9 +47,11 @@ To set up your python environment to run the code in this repository, follow the
 	activate drlnd
 	```
 	
-3. Clone the repository (if you haven't already!)
+3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
 ```bash
-git clone https://github.com/MathiasThor/deepReach.git
+git clone https://github.com/MathiasThor/BananaCollector.git
+cd BananaCollector/python
+pip install .
 ```
 
 4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
